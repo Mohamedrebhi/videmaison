@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import axios from '../utils/axiosConfig';
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from 'react-i18next'; // Add this import
 
 const FormContainer = styled(motion.div)`
   background-color: ${({ theme }) => theme.colors.primary};
@@ -156,7 +156,8 @@ const SuccessMessage = styled(motion.div)`
 `;
 
 const ContactForm = () => {
-  const { t, language } = useLanguage();
+  // Keep this part to maintain email language selection
+  const { t, i18n } = useTranslation();
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -164,21 +165,28 @@ const ContactForm = () => {
     address: '',
     service_type: '',
     message: '',
-    language: '' // Add language field
+    language: i18n.language // Initialize with current language
   });
   
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitSuccess, setSubmitSuccess] = useState(false);
   
-  // Update service types with translations
+  // Keep this useEffect to update language when it changes
+  useEffect(() => {
+    setFormData(prevData => ({
+      ...prevData,
+      language: i18n.language
+    }));
+  }, [i18n.language]);
+  
   const serviceTypes = [
-    { id: 'vide_maison', name: t('videMaison') },
-    { id: 'vide_appartement', name: t('videAppartement') },
-    { id: 'vide_grenier', name: t('videGrenier') },
-    { id: 'vide_locaux', name: t('videLocaux') },
-    { id: 'vide_cave', name: t('videCave') }, // Changed from vide_bureau to vide_cave
-    { id: 'nettoyage', name: t('nettoyage') }
+    { id: 'vide_maison', name: 'Vide Maison' },
+    { id: 'vide_appartement', name: 'Vide Appartement' },
+    { id: 'vide_grenier', name: 'Vide Grenier' },
+    { id: 'vide_locaux', name: 'Vide Locaux Professionnels' },
+    { id: 'vide_cave', name: 'Vide Cave' },
+    { id: 'nettoyage', name: 'Service de Nettoyage' }
   ];
   
   const handleChange = (e) => {
@@ -201,29 +209,29 @@ const ContactForm = () => {
     const newErrors = {};
     
     if (!formData.name.trim()) {
-      newErrors.name = t('nameRequired');
+      newErrors.name = 'Le nom est requis';
     }
     
     if (!formData.email.trim()) {
-      newErrors.email = t('emailRequired');
+      newErrors.email = 'L\'email est requis';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = t('invalidEmail');
+      newErrors.email = 'Format d\'email invalide';
     }
     
     if (!formData.phone.trim()) {
-      newErrors.phone = t('phoneRequired');
+      newErrors.phone = 'Le téléphone est requis';
     }
     
     if (!formData.address.trim()) {
-      newErrors.address = t('addressRequired');
+      newErrors.address = 'L\'adresse est requise';
     }
     
     if (!formData.service_type) {
-      newErrors.service_type = t('serviceRequired');
+      newErrors.service_type = 'Veuillez sélectionner un service';
     }
     
     if (!formData.message.trim()) {
-      newErrors.message = t('messageRequired');
+      newErrors.message = 'Le message est requis';
     }
     
     setErrors(newErrors);
@@ -237,14 +245,8 @@ const ContactForm = () => {
       setIsSubmitting(true);
       
       try {
-        // Add the current language to the form data
-        const formDataWithLanguage = {
-          ...formData,
-          language: language // Add the current language
-        };
-        
         // Replace with your actual API endpoint
-        const response = await axios.post('http://localhost:5000/api/services/request', formDataWithLanguage);
+        const response = await axios.post('http://localhost:5000/api/services/request', formData);
         
         setSubmitSuccess(true);
         setFormData({
@@ -253,8 +255,7 @@ const ContactForm = () => {
           phone: '',
           address: '',
           service_type: '',
-          message: '',
-          language: ''
+          message: ''
         });
         
         // Reset success message after 5 seconds
@@ -265,7 +266,7 @@ const ContactForm = () => {
         console.error('Error submitting form:', error);
         setErrors({
           ...errors,
-          submit: t('errorSubmitting')
+          submit: 'Une erreur est survenue. Veuillez réessayer plus tard.'
         });
       } finally {
         setIsSubmitting(false);
@@ -279,7 +280,7 @@ const ContactForm = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5 }}
     >
-      <FormTitle>{t('serviceRequest')}</FormTitle>
+      <FormTitle>Service</FormTitle>
       
       {submitSuccess && (
         <SuccessMessage
@@ -287,13 +288,13 @@ const ContactForm = () => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          {t('successMessage')}
+          Votre demande a été envoyée avec succès. Nous vous contacterons bientôt.
         </SuccessMessage>
       )}
       
       <Form onSubmit={handleSubmit}>
         <FormGroup>
-          <Label htmlFor="name">{t('name')}</Label>
+          <Label htmlFor="name">Nom</Label>
           <Input
             type="text"
             id="name"
@@ -305,7 +306,7 @@ const ContactForm = () => {
         </FormGroup>
         
         <FormGroup>
-          <Label htmlFor="email">{t('email')}</Label>
+          <Label htmlFor="email">Email</Label>
           <Input
             type="email"
             id="email"
@@ -317,7 +318,7 @@ const ContactForm = () => {
         </FormGroup>
         
         <FormGroup>
-          <Label htmlFor="phone">{t('phone')}</Label>
+          <Label htmlFor="phone">Téléphone</Label>
           <Input
             type="tel"
             id="phone"
@@ -329,7 +330,7 @@ const ContactForm = () => {
         </FormGroup>
         
         <FormGroup>
-          <Label htmlFor="address">{t('address')}</Label>
+          <Label htmlFor="address">Adresse</Label>
           <Input
             type="text"
             id="address"
@@ -341,14 +342,14 @@ const ContactForm = () => {
         </FormGroup>
         
         <FormGroup className="full-width">
-          <Label htmlFor="service_type">{t('serviceType')}</Label>
+          <Label htmlFor="service_type">Type de service</Label>
           <Select
             id="service_type"
             name="service_type"
             value={formData.service_type}
             onChange={handleChange}
           >
-            <option value="">{t('selectService')}</option>
+            <option value="">Sélectionnez un service</option>
             {serviceTypes.map(service => (
               <option key={service.id} value={service.id}>
                 {service.name}
@@ -359,7 +360,7 @@ const ContactForm = () => {
         </FormGroup>
         
         <FormGroup className="full-width">
-          <Label htmlFor="message">{t('message')}</Label>
+          <Label htmlFor="message">Message</Label>
           <Textarea
             id="message"
             name="message"
@@ -376,7 +377,7 @@ const ContactForm = () => {
         )}
         
         <SubmitButton type="submit" disabled={isSubmitting}>
-          {isSubmitting ? t('sending') : t('send')}
+          {isSubmitting ? 'Chargement...' : 'Envoyer'}
         </SubmitButton>
       </Form>
     </FormContainer>

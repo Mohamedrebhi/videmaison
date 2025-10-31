@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import styled from 'styled-components';
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 const FooterContainer = styled.footer`
   background-color: ${({ theme }) => theme.colors.primary};
@@ -70,7 +70,7 @@ const Copyright = styled.div`
 `;
 
 const Footer = () => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
   
   return (
     <FooterContainer>
@@ -78,7 +78,7 @@ const Footer = () => {
         <FooterColumn>
           <FooterTitle>Vide Maison</FooterTitle>
           <FooterText>
-            {t('companyDescription')}
+            Nous sommes spécialisés dans le débarras de maisons, appartements, greniers, locaux professionnels et caves. Nous offrons également des services de nettoyage professionnel.
           </FooterText>
           <SocialLinks>
             <SocialLink href="#" target="_blank" rel="noopener noreferrer">
@@ -94,25 +94,25 @@ const Footer = () => {
         </FooterColumn>
         
         <FooterColumn>
-          <FooterTitle>{t('services')}</FooterTitle>
-          <FooterLink to="/services#vide-maison">{t('videMaison')}</FooterLink>
-          <FooterLink to="/services#vide-appartement">{t('videAppartement')}</FooterLink>
-          <FooterLink to="/services#vide-grenier">{t('videGrenier')}</FooterLink>
-          <FooterLink to="/services#vide-locaux">{t('videLocaux')}</FooterLink>
-          <FooterLink to="/services#vide-cave">{t('videCave')}</FooterLink>
+          <FooterTitle>Nos Services</FooterTitle>
+          <FooterLink to="/services#vide-maison">Vide Maison</FooterLink>
+          <FooterLink to="/services#vide-appartement">Vide Appartement</FooterLink>
+          <FooterLink to="/services#vide-grenier">Vide Grenier</FooterLink>
+          <FooterLink to="/services#vide-locaux">Vide Locaux Professionnels</FooterLink>
+          <FooterLink to="/services#vide-cave">Vide Cave</FooterLink>
         </FooterColumn>
         
         <FooterColumn>
-          <FooterTitle>{t('usefulLinks')}</FooterTitle>
-          <FooterLink to="/">{t('home')}</FooterLink>
-          <FooterLink to="/about">{t('about')}</FooterLink>
-          <FooterLink to="/contact">{t('contact')}</FooterLink>
-          <FooterLink to="/terms">{t('termsOfUse')}</FooterLink>
-          <FooterLink to="/privacy">{t('privacyPolicy')}</FooterLink>
+          <FooterTitle>Liens Utiles</FooterTitle>
+          <FooterLink to="/">Accueil</FooterLink>
+          <FooterLink to="/about">À Propos</FooterLink>
+          <FooterLink to="/contact">Contact</FooterLink>
+          <FooterLink to="/terms">Conditions d'Utilisation</FooterLink>
+          <FooterLink to="/privacy">Politique de Confidentialité</FooterLink>
         </FooterColumn>
         
         <FooterColumn>
-          <FooterTitle>{t('contact')}</FooterTitle>
+          <FooterTitle>Contact</FooterTitle>
           <FooterText>
             <i className="fas fa-map-marker-alt"></i> Bruxelles, Belgique
           </FooterText>
@@ -126,7 +126,7 @@ const Footer = () => {
       </FooterContent>
       
       <Copyright>
-        &copy; {new Date().getFullYear()} Vide Maison. {t('allRightsReserved')}
+        © {new Date().getFullYear()} Vide Maison. Tous droits réservés.
       </Copyright>
     </FooterContainer>
   );

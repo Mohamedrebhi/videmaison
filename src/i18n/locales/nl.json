@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Diensten",
+    "about": "Over Ons",
+    "contact": "Contact",
+    "admin": "Beheer"
+  },
+  "hero": {
+    "title": "VideMaison - Uw Vertrouwde Partner",
+    "subtitle": "Professionele woningontruiming, appartement en schoonmaakdiensten",
+    "cta": "Offerte Aanvragen",
+    "learnMore": "Meer Weten"
+  },
+  "services": {
+    "title": "Onze Diensten",
+    "videMailson": {
+      "title": "Woningontruiming",
+      "description": "Complete woningontruiming met sortering en afvoer"
+    },
+    "videAppartement": {
+      "title": "Appartementontruiming",
+      "description": "Snelle en efficiënte appartementontruiming"
+    },
+    "videGrenier": {
+      "title": "Zolderontruiming",
+      "description": "Zolder en vliering ontruiming"
+    },
+    "videLocaux": {
+      "title": "Bedrijfspandontruiming",
+      "description": "Kantoor en commerciële pand ontruiming"
+    },
+    "videBreau": {
+      "title": "Kantoorontruiming",
+      "description": "Kantoorverhuizing en ontruimingsdiensten"
+    },
+    "nettoyage": {
+      "title": "Schoonmaak",
+      "description": "Schoonmaakservice na ontruiming"
+    }
+  },
+  "contact": {
+    "title": "Neem Contact Op",
+    "form": {
+      "name": "Naam",
+      "email": "Email",
+      "phone": "Telefoon",
+      "address": "Adres",
+      "serviceType": "Service Type",
+      "message": "Bericht",
+      "submit": "Verzoek Verzenden"
+    },
+    "info": {
+      "phone": "Telefoon",
+      "email": "Email",
+      "address": "Adres"
+    }
+  },
+  "about": {
+    "title": "Over VideMaison",
+    "mission": "Onze Missie",
+    "company": "Ons Bedrijf"
+  },
+  "admin": {
+    "login": {
+      "title": "Beheerder Inloggen",
+      "email": "Email",
+      "password": "Wachtwoord",
+      "submit": "Inloggen",
+      "error": "Ongeldige inloggegevens"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "requests": "Verzoeken",
+      "users": "Gebruikers",
+      "settings": "Instellingen"
+    }
+  },
+  "common": {
+    "loading": "Laden...",
+    "error": "Fout",
+    "success": "Succes",
+    "cancel": "Annuleren",
+    "save": "Opslaan",
+    "delete": "Verwijderen",
+    "edit": "Bewerken",
+    "view": "Bekijken",
+    "back": "Terug",
+    "next": "Volgende",
+    "previous": "Vorige"
+  }
+}

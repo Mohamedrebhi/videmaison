@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import Hero3D from '../components/Hero3D';
 import ServiceCard from '../components/ServiceCard';
 import ContactForm from '../components/ContactForm';
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from 'react-i18next'; // Nous gardons cette import pour la compatibilité
 
 const HomeContainer = styled.div`
   width: 100%;
@@ -45,8 +45,8 @@ const ContactContainer = styled.div`
 `;
 
 const HomePage = () => {
+  const { t } = useTranslation(); // Nous gardons cette ligne pour la compatibilité
   const servicesRef = useRef(null);
-  const { t } = useLanguage();
   
   const scrollToServices = () => {
     servicesRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -55,38 +55,38 @@ const HomePage = () => {
   const services = [
     {
       id: 'vide-maison',
-      title: t('videMaison'),
-      description: t('videMaisonDesc'),
+      title: 'Vide Maison',
+      description: 'Service professionnel de débarras de maison complet',
       image: './images/maison.jpg'
     },
     {
       id: 'vide-appartement',
-      title: t('videAppartement'),
-      description: t('videAppartementDesc'),
+      title: 'Vide Appartement',
+      description: 'Débarras d\'appartement rapide et efficace',
       image: '/images/appartement.jpg'
     },
     {
       id: 'vide-grenier',
-      title: t('videGrenier'),
-      description: t('videGrenierDesc'),
+      title: 'Vide Grenier',
+      description: 'Nettoyage et débarras de greniers',
       image: '/images/Grenier.jpg'
     },
     {
       id: 'vide-locaux',
-      title: t('videLocaux'),
-      description: t('videLocauxDesc'),
+      title: 'Vide Locaux Professionnels',
+      description: 'Débarras de locaux commerciaux et professionnels',
       image: '/images/LocauxProfessionnels.jpg'
     },
     {
       id: 'vide-cave',
-      title: t('videCave'),
-      description: t('videCaveDesc'),
+      title: 'Vide Cave',
+      description: 'Débarras et nettoyage de caves',
       image: '/images/Bureau.jpg'
     },
     {
       id: 'nettoyage',
-      title: t('nettoyage'),
-      description: t('nettoyageDesc'),
+      title: 'Service de Nettoyage',
+      description: 'Nettoyage professionnel après débarras',
       image: '/images/Nettoyage.jpg'
     }
   ];
@@ -97,7 +97,7 @@ const HomePage = () => {
       
       <ServicesSection ref={servicesRef} id="services">
         <SectionTitle>
-          {t('ourServices')} <span>{t('services')}</span>
+          Nos Services <span>Professionnels</span>
         </SectionTitle>
         <ServicesGrid>
           {services.map(service => (
@@ -114,7 +114,7 @@ const HomePage = () => {
       
       <ContactSection id="contact">
         <SectionTitle>
-          {t('contactUs')} <span>{t('us')}</span>
+          Contactez <span>Nous</span>
         </SectionTitle>
         <ContactContainer>
           <ContactForm />

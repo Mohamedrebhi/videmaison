@@ -446,15 +446,22 @@ const AdminDashboardHome = () => {
   useEffect(() => {
     const fetchStats = async () => {
       try {
-        console.log('Auth token:', localStorage.getItem('token'));
-        console.log('Fetching dashboard stats...');
         const response = await axios.get('/api/admin/dashboard/stats');
         console.log('Dashboard stats response:', response.data);
         setStats(response.data);
       } catch (error) {
         console.error('Failed to fetch dashboard stats:', error);
-        console.error('Error details:', error.response || error.request || error.message);
-        // Fallback to empty data
+        // Fallback to empty data if API call fails
+        setStats({
+          totalRequests: 0,
+          pendingRequests: 0,
+          completedRequests: 0,
+          cancelledRequests: 0,
+          totalChange: 0,
+          pendingChange: 0,
+          completedChange: 0,
+          recentRequests: []
+        });
       }
     };
     
@@ -472,7 +479,7 @@ const AdminDashboardHome = () => {
           <div className="stat-value">{stats.totalRequests}</div>
           <div className="stat-change positive">
             <i className="fas fa-info-circle"></i> 
-            tous service
+            All-time total
           </div>
         </StatCard>
         

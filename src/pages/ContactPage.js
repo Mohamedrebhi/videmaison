@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import ContactForm from '../components/ContactForm';
+import { useTranslation } from 'react-i18next';
 
 const PageContainer = styled.div`
   padding-top: 80px; // For navbar
@@ -98,13 +99,13 @@ const FormContainer = styled.div`
 `;
 
 const ContactPage = () => {
+  const { t } = useTranslation();
+  
   return (
     <PageContainer>
       <HeroSection>
         <div>
-          <HeroTitle>
-            Contactez <span>Nous</span>
-          </HeroTitle>
+          <HeroTitle>Contactez <span>Nous</span></HeroTitle>
         </div>
       </HeroSection>
       
@@ -113,7 +114,7 @@ const ContactPage = () => {
           <ContactInfo>
             <ContactTitle>Informations de Contact</ContactTitle>
             <ContactText>
-              N'hésitez pas à nous contacter pour toute demande d'information ou pour obtenir un devis gratuit. Notre équipe est à votre disposition pour vous répondre dans les plus brefs délais.
+              N'hésitez pas à nous contacter pour toute question ou pour demander un devis gratuit. Notre équipe est à votre disposition pour vous aider.
             </ContactText>
             
             <ContactInfoItem>
@@ -133,7 +134,7 @@ const ContactPage = () => {
             
             <ContactInfoItem>
               <i className="fas fa-clock"></i>
-              <div>Lun - Ven: 8h - 18h<br />Sam: 9h - 16h</div>
+              <div>24/24 et 7/7</div>
             </ContactInfoItem>
             
             <MapContainer>
@@ -147,7 +148,7 @@ const ContactPage = () => {
           </ContactInfo>
           
           <FormContainer>
-            <ContactTitle>Envoyez-nous un Message</ContactTitle>
+            <ContactTitle>Formulaire de Contact</ContactTitle>
             <ContactForm />
           </FormContainer>
         </ContactContainer>

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
-import { useLanguage } from '../context/LanguageContext';
+import { useTranslation } from 'react-i18next';
 
 const Card = styled(motion.div)`
   background-color: ${({ theme }) => theme.colors.primary};
@@ -83,16 +83,22 @@ const CardButton = styled.button`
 `;
 
 const ServiceCard = ({ title, description, image, onClick }) => {
-  const { t } = useLanguage();
+  const { t } = useTranslation();
   
   return (
-    <Card onClick={onClick}>
-      <CardImage src={image} alt={title} />
-      <CardOverlay />
+    <Card
+      initial={{ opacity: 0, y: 50 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+    >
+      <CardImage>
+        <img src={image} alt={title} />
+        <CardOverlay />
+      </CardImage>
       <CardContent>
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
-        <CardButton>{t('learnMore')}</CardButton>
+        <CardButton onClick={onClick}>{t('hero.learnMore')}</CardButton>
       </CardContent>
     </Card>
   );

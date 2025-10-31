@@ -1,0 +1,134 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "admin": "Admin"
+  },
+  "hero": {
+    "title": "VideMaison - Your Trusted Partner",
+    "subtitle": "Professional house clearance, apartment and cleaning services",
+    "cta": "Request Quote",
+    "learnMore": "Learn More"
+  },
+  "services": {
+    "title": "Our Services",
+    "highlight": "Services",
+    "learnMore": "Learn More",
+    "pageTitle": "Our <span>Services</span>",
+    "pageSubtitle": "Discover our complete range of clearance and cleaning services, tailored to all your needs.",
+    "descriptions": {
+      "videMailson": {
+        "intro": "Our house clearance service is designed to rid you of all unwanted items, whether following an inheritance, a move, or simply to make space.",
+        "weOffer": "We intervene quickly and efficiently to:",
+        "points": [
+          "Free evaluation of contents to be cleared",
+          "Sort items according to their value and condition",
+          "Dismantle furniture if necessary",
+          "Remove all objects and waste",
+          "Manage recycling and waste recovery"
+        ],
+        "conclusion": "Our professional team works with respect and discretion, ensuring the preservation of your property during the intervention."
+      },
+      "videAppartement": {
+        "intro": "Our apartment clearance service is perfectly adapted to smaller spaces and the specific constraints of buildings (elevators, stairs, etc.).",
+        "weOffer": "We offer:",
+        "points": [
+          "Quick intervention, ideal for end of lease",
+          "A team experienced in apartment clearance",
+          "Solutions adapted to access constraints",
+          "A complete service including dismantling if necessary",
+          "Eco-responsible waste management"
+        ],
+        "conclusion": "We guarantee a discreet and efficient service, respectful of your neighborhood and the common areas of the building."
+      },
+      "videGrenier": {
+        "intro": "Our attic clearance service helps you free up your cluttered attics and storage spaces, often difficult to access.",
+        "weOffer": "With us, you benefit from:",
+        "points": [
+          "Precise sorting of items that can be kept, recycled or thrown away",
+          "Management of heavy and bulky items",
+          "Secure access even in narrow areas",
+          "Eco-responsible waste treatment"
+        ],
+        "conclusion": "We ensure that your attic regains all its space, ready for new projects."
+      },
+      "videLocaux": {
+        "intro": "We support businesses and professionals in clearing their premises, workshops, shops or warehouses.",
+        "weOffer": "Our service includes:",
+        "points": [
+          "Quick evacuation of obsolete furniture and equipment",
+          "Dismantling and heavy handling",
+          "Strict compliance with safety standards",
+          "Recycling and treatment adapted to professional waste"
+        ],
+        "conclusion": "We intervene in short timeframes to limit the impact on your activity."
+      },
+      "videBureau": {
+        "intro": "Our office clearance service is intended for companies wishing to free up or reorganize their work spaces.",
+        "weOffer": "We offer:",
+        "points": [
+          "Office furniture clearance (chairs, tables, cabinets...)",
+          "Recovery and valuation of computer equipment",
+          "Selective sorting and responsible waste management",
+          "Discreet and organized intervention"
+        ],
+        "conclusion": "We help you optimize your spaces while respecting your scheduling constraints."
+      },
+      "nettoyage": {
+        "intro": "In addition to clearance, we offer cleaning services to make your spaces perfectly clean and ready for use.",
+        "weOffer": "Our services include:",
+        "points": [
+          "Complete cleaning of floors and surfaces",
+          "Disinfection of sensitive areas",
+          "Dusting and window washing",
+          "Environmentally friendly products"
+        ],
+        "conclusion": "We adapt our intervention to your specific needs for an impeccable result."
+      }
+    }
+  },
+  "about": {
+    "title": "About VideMaison",
+    "mission": "Our Mission",
+    "company": "Our Company"
+  },
+  "admin": {
+    "login": {
+      "title": "Admin Login",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Login",
+      "error": "Invalid credentials"
+    },
+    "dashboard": {
+      "title": "Dashboard",
+      "requests": "Requests",
+      "users": "Users",
+      "settings": "Settings"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "view": "View",
+    "back": "Back",
+    "next": "Next",
+    "previous": "Previous"
+  },
+  "footer": {
+    "company": {
+      "description": "Our company is what comes closest to perfection in terms of offering house clearance, attic clearance, apartment clearance services, etc."
+    },
+    "services": "Services",
+    "usefulLinks": "Useful Links",
+    "contact": "Contact",
+    "copyright": "© {year} Vide Maison. All rights reserved."
+  }
+}

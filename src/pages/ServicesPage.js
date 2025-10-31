@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const PageContainer = styled.div`
   padding-top: 80px; // For navbar
@@ -100,6 +101,7 @@ const ServiceDescription = styled.div`
 
 const ServicesPage = () => {
   const location = useLocation();
+  const { t } = useTranslation();
   
   useEffect(() => {
     // Scroll to service section if hash is present
@@ -116,127 +118,139 @@ const ServicesPage = () => {
   const services = [
     {
       id: 'vide-maison',
-      title: 'Vide Maison', 
+      title: 'Vide Maison', // Titre en français
       image: '/images/maison.jpg',
       description: (
         <>
-          <p>Notre service de vide maison est conçu pour vous débarrasser de tous les objets dont vous ne voulez plus, que ce soit suite à une succession, un déménagement ou simplement pour faire de la place.</p>
-          <p>Nous intervenons rapidement et efficacement pour :</p>
+          <p>Nous offrons un service complet de débarras de maison pour toutes les situations.</p>
+          <p>Notre service de vide maison comprend :</p>
           <ul>
-            <li>Évaluer gratuitement le contenu à débarrasser</li>
-            <li>Trier les objets selon leur valeur et leur état</li>
-            <li>Démonter les meubles si nécessaire</li>
-            <li>Évacuer tous les objets et déchets</li>
-            <li>Gérer le recyclage et la valorisation des déchets</li>
+            <>
+              <li>Vidage complet de maisons de toutes tailles</li>
+              <li>Tri et élimination éco-responsable des objets</li>
+              <li>Démontage de meubles si nécessaire</li>
+              <li>Manipulation soigneuse des objets de valeur</li>
+              <li>Service rapide et efficace</li>
+            </>
           </ul>
-          <p>Notre équipe professionnelle travaille avec respect et discrétion, en veillant à préserver votre propriété pendant l'intervention.</p>
+          <p>Contactez-nous pour un devis gratuit adapté à vos besoins.</p>
         </>
       )
     },
     {
       id: 'vide-appartement',
-      title: 'Vide Appartement',
+      title: 'Vide Appartement', // Titre en français
       image: '/images/appartement.jpg',
       description: (
         <>
-          <p>Notre service de vide appartement est parfaitement adapté aux espaces plus restreints et aux contraintes spécifiques des immeubles (ascenseurs, escaliers, etc.).</p>
-          <p>Nous proposons :</p>
+          <p>Notre service de débarras d'appartement est parfait pour les déménagements ou les fins de bail.</p>
+          <p>Nous fournissons un débarras d'appartement professionnel avec :</p>
           <ul>
-            <li>Une intervention rapide, idéale pour les fins de bail</li>
-            <li>Une équipe expérimentée dans les débarras d'appartements</li>
-            <li>Des solutions adaptées aux contraintes d'accès</li>
-            <li>Un service complet incluant le démontage si nécessaire</li>
-            <li>Une gestion éco-responsable des déchets</li>
+            <>
+              <li>Intervention rapide, idéale pour les fins de bail</li>
+              <li>Une équipe expérimentée dans le débarras d'appartements</li>
+              <li>Solutions adaptées aux contraintes d'accès</li>
+              <li>Un service complet incluant le démontage si nécessaire</li>
+              <li>Gestion éco-responsable des déchets</li>
+            </>
           </ul>
-          <p>Nous garantissons un service discret et efficace, respectueux de votre voisinage et des parties communes de l'immeuble.</p>
+          <p>Nous garantissons une expérience sans stress pour tous vos besoins de débarras d'appartement.</p>
         </>
       )
     },
     {
       id: 'vide-grenier',
-      title: 'Vide Grenier',
+      title: 'Vide Grenier', // Titre en français
       image: '/images/grenier.jpg',
       description: (
         <>
-          <p>Notre service de vide grenier vous aide à libérer vos combles et espaces de stockage encombrés, souvent difficiles d’accès.</p>
-          <p>Avec nous, vous bénéficiez de :</p>
+          <p>Nous sommes spécialisés dans le débarras de greniers et d'espaces sous combles encombrés.</p>
+          <p>Notre service de vide grenier comprend :</p>
           <ul>
-            <li>Un tri précis des objets conservables, recyclables ou jetables</li>
-            <li>Une gestion des objets lourds et encombrants</li>
-            <li>Un accès sécurisé même dans les zones étroites</li>
-            <li>Un traitement éco-responsable des déchets</li>
+            <>
+              <li>Enlèvement sécurisé d'objets dans des espaces difficiles d'accès</li>
+              <li>Élimination appropriée des anciennes isolations et matériaux</li>
+              <li>Manipulation soigneuse d'objets vintage potentiellement précieux</li>
+              <li>Nettoyage complet après débarras</li>
+              <li>Gestion des déchets respectueuse de l'environnement</li>
+            </>
           </ul>
-          <p>Nous veillons à ce que votre grenier retrouve tout son espace, prêt pour de nouveaux projets.</p>
+          <p>Transformez votre grenier encombré en espace utilisable avec notre service professionnel.</p>
         </>
       )
     },
     {
       id: 'vide-locaux',
-      title: 'Vide Locaux Professionnels',
+      title: 'Vide Locaux Professionnels', // Titre en français
       image: '/images/LocauxProfessionnels.jpg',
       description: (
         <>
-          <p>Nous accompagnons les entreprises et professionnels dans le débarras de leurs locaux, ateliers, commerces ou entrepôts.</p>
-          <p>Notre service inclut :</p>
+          <p>Nous fournissons des services de débarras efficaces pour tous types de locaux commerciaux.</p>
+          <p>Notre service de débarras commercial offre :</p>
           <ul>
-            <li>L'évacuation rapide du mobilier et matériel obsolète</li>
-            <li>Le démontage et la manutention lourde</li>
-            <li>Un respect strict des normes de sécurité</li>
-            <li>Un recyclage et traitement adapté aux déchets professionnels</li>
+            <>
+              <li>Débarras complet de bureaux, magasins et entrepôts</li>
+              <li>Élimination sécurisée de documents confidentiels</li>
+              <li>Enlèvement et recyclage d'équipements électroniques</li>
+              <li>Planification flexible pour minimiser les perturbations commerciales</li>
+              <li>Manipulation professionnelle des installations et aménagements commerciaux</li>
+            </>
           </ul>
-          <p>Nous intervenons dans des délais courts pour limiter l’impact sur votre activité.</p>
+          <p>Nous aidons les entreprises à effectuer une transition en douceur vers de nouveaux locaux ou à préparer des espaces pour de nouveaux locataires.</p>
         </>
       )
     },
     {
-      id: 'vide-bureau',
-      title: 'Vide Bureau',
-      image: '/images/bureau.jpg',
+      id: 'vide-cave',
+      title: 'Vide Cave', // Changement de vide-bureau à vide-cave
+      image: '/images/bureau.jpg', // Utilisation de l'image existante
       description: (
         <>
-          <p>Notre service de vide bureau est destiné aux entreprises souhaitant libérer ou réaménager leurs espaces de travail.</p>
-          <p>Nous proposons :</p>
+          <p>Notre service de débarras de cave vous aide à récupérer cet espace de stockage précieux.</p>
+          <p>Nous offrons un débarras de cave complet comprenant :</p>
           <ul>
-            <li>Le débarras de mobilier de bureau (chaises, tables, armoires...)</li>
-            <li>La récupération et valorisation du matériel informatique</li>
-            <li>Un tri sélectif et une gestion responsable des déchets</li>
-            <li>Une intervention discrète et organisée</li>
+            <>
+              <li>Enlèvement d'objets lourds et encombrants</li>
+              <li>Traitement des problèmes d'humidité et de moisissure</li>
+              <li>Tri et recyclage des matériaux</li>
+              <li>Service disponible le week-end et en soirée</li>
+              <li>Manipulation professionnelle dans des espaces confinés</li>
+            </>
           </ul>
-          <p>Nous vous aidons à optimiser vos espaces tout en respectant vos contraintes de planning.</p>
+          <p>Laissez-nous gérer votre cave encombrée pour créer un espace de stockage propre et fonctionnel.</p>
         </>
       )
     },
     {
       id: 'nettoyage',
-      title: 'Nettoyage',
+      title: 'Services de Nettoyage', // Titre en français
       image: '/images/nettoyage.jpg',
       description: (
         <>
-          <p>En complément du débarras, nous proposons des prestations de nettoyage pour rendre vos espaces parfaitement propres et prêts à l’usage.</p>
-          <p>Nos prestations incluent :</p>
+          <p>Nous fournissons des services de nettoyage complets après débarras ou pour un entretien régulier.</p>
+          <p>Nos services de nettoyage comprennent :</p>
           <ul>
-            <li>Le nettoyage complet des sols et surfaces</li>
-            <li>La désinfection des espaces sensibles</li>
-            <li>Le dépoussiérage et lavage des vitres</li>
-            <li>Des produits respectueux de l’environnement</li>
+            <>
+              <li>Nettoyage en profondeur de toutes les surfaces</li>
+              <li>Nettoyage des vitres et des surfaces vitrées</li>
+              <li>Nettoyage des tapis et des meubles rembourrés</li>
+              <li>Nettoyage de fin de bail</li>
+              <li>Produits de nettoyage écologiques disponibles</li>
+            </>
           </ul>
-          <p>Nous adaptons notre intervention à vos besoins spécifiques pour un résultat impeccable.</p>
+          <p>Laissez votre espace impeccable avec nos services de nettoyage professionnels.</p>
         </>
       )
     }
-    
-    // Add remaining services
   ];
   
   return (
     <PageContainer>
       <HeroSection>
         <div>
-          <HeroTitle>
-            Nos <span>Services</span>
-          </HeroTitle>
+          <HeroTitle>Nos <span>Services</span></HeroTitle>
           <HeroSubtitle>
-            Découvrez notre gamme complète de services de débarras et nettoyage, adaptés à tous vos besoins.
+            Services professionnels de débarras et de nettoyage pour tous vos besoins
           </HeroSubtitle>
         </div>
       </HeroSection>

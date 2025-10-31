@@ -1,70 +1,217 @@
-# Getting Started with Create React App
+# VideMaison
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A modern full-stack real estate management platform built with React and Flask, featuring real-time communication, admin dashboard, and multilingual support.
 
-## Available Scripts
+## Overview
 
-In the project directory, you can run:
+VideMaison is a comprehensive real estate management platform designed to streamline property management, communication, and user experience. The platform is built using React and Flask, with a focus on scalability, security, and maintainability.
 
-### `npm start`
+## Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **Property Listings**: Browse and manage real estate properties
+- **Real-time Chat**: WebSocket-based live communication system
+- **Admin Dashboard**: Comprehensive admin panel for property and user management
+- **Multilingual Support**: Multi-language interface for better accessibility
+- **Authentication**: Secure JWT-based authentication system
+- **Email Notifications**: Automated email notifications via Flask-Mail
+- **Responsive Design**: Modern, mobile-friendly UI with styled-components
+- **3D Visualizations**: Interactive 3D elements using Three.js
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Tech Stack
 
-### `npm test`
+### Frontend
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **React** 19.2.0 - UI framework
+- **React Router** - Client-side routing
+- **Styled Components** - CSS-in-JS styling
+- **Three.js & React Three Fiber** - 3D graphics
+- **Framer Motion** - Animations
+- **Socket.io Client** - Real-time communication
+- **Axios** - HTTP client
 
-### `npm run build`
+### Backend
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- **Flask** 2.0.1 - Python web framework
+- **Flask-SocketIO** - WebSocket support
+- **MongoDB** - NoSQL database
+- **Flask-JWT-Extended** - JWT authentication
+- **Flask-Mail** - Email functionality
+- **Flask-CORS** - Cross-origin resource sharing
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Prerequisites
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Before you begin, ensure you have the following installed:
 
-### `npm run eject`
+- **Node.js** (v14 or higher)
+- **npm** (v6 or higher)
+- **Python** (v3.8 or higher)
+- **pip** (Python package manager)
+- **MongoDB** (v4.0 or higher)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Installation
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 1. Clone the Repository
+```bash
+git clone <repository-url>
+cd videmaison
+```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### 2. Backend Setup
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+#### Install Python Dependencies
+```bash
+cd backend
+pip install -r requirements.txt
+```
 
-## Learn More
+#### Configure Environment Variables
+Create a `.env` file in the `backend/` directory with the following variables:
+```env
+SECRET_KEY=your_secret_key_here
+JWT_SECRET_KEY=your_jwt_secret_key_here
+MONGO_URI=mongodb://localhost:27017/videmaison
+MAIL_SERVER=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USE_TLS=True
+MAIL_USERNAME=your_email@gmail.com
+MAIL_PASSWORD=your_app_password
+MAIL_DEFAULT_SENDER=your_email@gmail.com
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+> **Note**: For Gmail, you'll need to generate an [App Password](https://support.google.com/accounts/answer/185833) instead of using your regular password.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+#### Start MongoDB
+Ensure MongoDB is running on your system:
+```bash
+# Windows
+net start MongoDB
 
-### Code Splitting
+# macOS/Linux
+sudo systemctl start mongod
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+#### Create Admin User (Optional)
+```bash
+python create_admin.py
+```
 
-### Analyzing the Bundle Size
+#### Start the Backend Server
+```bash
+python run.py
+```
+The backend will run on `http://localhost:5000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### 3. Frontend Setup
 
-### Making a Progressive Web App
+#### Install Node Dependencies
+Open a new terminal and navigate to the project root:
+```bash
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+#### Configure Environment Variables (Optional)
+Create a `.env` file in the root directory if you need to customize the API endpoint:
+```env
+REACT_APP_API_URL=http://localhost:5000
+```
 
-### Advanced Configuration
+#### Start the Development Server
+```bash
+npm start
+```
+The application will open at `http://localhost:3000`
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Usage
 
-### Deployment
+### Development Mode
+1. Start the backend server (see Backend Setup)
+2. Start the frontend development server (see Frontend Setup)
+3. Navigate to `http://localhost:3000` in your browser
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+### Admin Access
+- Navigate to `/admin/login`
+- Use the credentials created with `create_admin.py`
+- Access the admin dashboard at `/admin/dashboard`
 
-### `npm run build` fails to minify
+### Available Scripts
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+#### Frontend
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App (one-way operation)
+
+#### Backend
+- `python run.py` - Starts the Flask development server
+- `python create_admin.py` - Creates an admin user
+
+## Project Structure
+
+```
+videmaison/
+├── backend/
+│   ├── app/
+│   │   ├── controllers/    # Request handlers
+│   │   ├── models/         # Database models
+│   │   ├── routes/         # API routes
+│   │   └── services/       # Business logic
+│   ├── .env               # Backend environment variables
+│   ├── run.py             # Backend entry point
+│   └── requirements.txt   # Python dependencies
+├── src/
+│   ├── components/        # React components
+│   ├── context/          # React context providers
+│   ├── pages/            # Page components
+│   └── styles/           # Global styles
+├── public/               # Static assets
+├── .env                  # Frontend environment variables
+└── package.json          # Node dependencies
+```
+
+## Security Notes
+
+- Never commit `.env` files to version control
+- Use strong, unique values for `SECRET_KEY` and `JWT_SECRET_KEY`
+- For production, use environment-specific configuration
+- Enable HTTPS in production environments
+
+## Deployment
+
+### Production Build
+```bash
+npm run build
+```
+This creates an optimized production build in the `build/` folder.
+
+### Backend Deployment
+- Use a production WSGI server like **Gunicorn** or **uWSGI**
+- Set `debug=False` in production
+- Use environment variables for sensitive configuration
+
+### Frontend Deployment
+The build folder can be deployed to:
+- **Netlify**
+- **Vercel**
+- **GitHub Pages**
+- **AWS S3 + CloudFront**
+- Any static hosting service
+
+## Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
+
+## Contact
+
+For questions or support, please contact: [your-email@example.com]
+
+---
+
+Built with ❤️ using React and Flask

@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "about": "À Propos",
+    "contact": "Contact",
+    "admin": "Administration"
+  },
+  "hero": {
+    "title": "VideMaison - Votre Partenaire de Confiance",
+    "subtitle": "Services professionnels de vide maison, appartement et nettoyage",
+    "cta": "Demander un Devis",
+    "learnMore": "En Savoir Plus"
+  },
+  "services": {
+    "title": "Nos Services",
+    "videMailson": {
+      "title": "Vide Maison",
+      "description": "Service complet de vidage de maison avec tri et évacuation"
+    },
+    "videAppartement": {
+      "title": "Vide Appartement",
+      "description": "Vidage d'appartement rapide et efficace"
+    },
+    "videGrenier": {
+      "title": "Vide Grenier",
+      "description": "Débarras de grenier et combles"
+    },
+    "videLocaux": {
+      "title": "Vide Locaux Professionnels",
+      "description": "Vidage de bureaux et locaux commerciaux"
+    },
+    "videBureau": {
+      "title": "Vide Bureau",
+      "description": "Déménagement et vidage de bureaux"
+    },
+    "nettoyage": {
+      "title": "Nettoyage",
+      "description": "Service de nettoyage après vidage"
+    }
+  },
+  "contact": {
+    "title": "Contactez-Nous",
+    "form": {
+      "name": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "serviceType": "Type de Service",
+      "message": "Message",
+      "submit": "Envoyer la Demande"
+    },
+    "info": {
+      "phone": "Téléphone",
+      "email": "Email",
+      "address": "Adresse"
+    }
+  },
+  "about": {
+    "title": "À Propos de VideMaison",
+    "mission": "Notre Mission",
+    "company": "Notre Entreprise"
+  },
+  "admin": {
+    "login": {
+      "title": "Connexion Administrateur",
+      "email": "Email",
+      "password": "Mot de Passe",
+      "submit": "Se Connecter",
+      "error": "Identifiants invalides"
+    },
+    "dashboard": {
+      "title": "Tableau de Bord",
+      "requests": "Demandes",
+      "users": "Utilisateurs",
+      "settings": "Paramètres"
+    }
+  },
+  "common": {
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "cancel": "Annuler",
+    "save": "Sauvegarder",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "view": "Voir",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent"
+  }
+}

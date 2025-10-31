@@ -1,0 +1,189 @@
+{
+  "nav": {
+    "home": "Hjem",
+    "services": "Tjenester",
+    "about": "Om Oss",
+    "contact": "Kontakt",
+    "admin": "Admin"
+  },
+  "hero": {
+    "title": "VideMaison - Din Pålitelige Partner",
+    "subtitle": "Profesjonelle tjenester for tømming av hus, leiligheter og rengjøring",
+    "cta": "Be Om Tilbud",
+    "learnMore": "Lær Mer"
+  },
+  "services": {
+    "title": "Våre Tjenester",
+    "highlight": "Tjenester",
+    "learnMore": "Lær Mer",
+    "pageTitle": "Våre <span>Tjenester</span>",
+    "pageSubtitle": "Oppdag vårt komplette utvalg av tømme- og rengjøringstjenester, skreddersydd for alle dine behov.",
+    "videMailson": {
+      "title": "Hustømming",
+      "description": "Komplett hustømmingstjeneste med sortering og fjerning"
+    },
+    "videAppartement": {
+      "title": "Leilighetstømming",
+      "description": "Rask og effektiv leilighetstømming"
+    },
+    "videGrenier": {
+      "title": "Loftstømming",
+      "description": "Tømming av loft og kjellerrom"
+    },
+    "videLocaux": {
+      "title": "Tømming av Næringslokaler",
+      "description": "Tømming av kontorer og kommersielle lokaler"
+    },
+    "videBureau": {
+      "title": "Kontortømming",
+      "description": "Flytting og tømming av kontorer"
+    },
+    "nettoyage": {
+      "title": "Rengjøring",
+      "description": "Rengjøringstjeneste etter tømming"
+    },
+    "descriptions": {
+      "videMailson": {
+        "intro": "Vår hustømmingstjeneste er designet for å kvitte deg med alle uønskede gjenstander, enten etter en arv, en flytting, eller bare for å skape plass.",
+        "weOffer": "Vi griper inn raskt og effektivt for å:",
+        "points": [
+          "Gratis evaluering av innhold som skal fjernes",
+          "Sortere gjenstander etter verdi og tilstand",
+          "Demontere møbler om nødvendig",
+          "Fjerne alle gjenstander og avfall",
+          "Håndtere resirkulering og avfallsgjenvinning"
+        ],
+        "conclusion": "Vårt profesjonelle team arbeider med respekt og diskresjon, og sikrer bevaring av din eiendom under arbeidet."
+      },
+      "videAppartement": {
+        "intro": "Vår leilighetstømmingstjeneste er perfekt tilpasset mindre rom og de spesifikke begrensningene i bygninger (heiser, trapper, osv.).",
+        "weOffer": "Vi tilbyr:",
+        "points": [
+          "Rask intervensjon, ideell for slutten av leieperioden",
+          "Et team med erfaring i leilighetstømming",
+          "Løsninger tilpasset tilgangsbegrensninger",
+          "En komplett tjeneste inkludert demontering om nødvendig",
+          "Miljøvennlig avfallshåndtering"
+        ],
+        "conclusion": "Vi garanterer en diskret og effektiv tjeneste, respektfull overfor ditt nabolag og fellesområdene i bygningen."
+      },
+      "videGrenier": {
+        "intro": "Vår loftstømmingstjeneste hjelper deg med å frigjøre overfylte loft og lagringsplasser, som ofte er vanskelige å få tilgang til.",
+        "weOffer": "Med oss får du:",
+        "points": [
+          "Presis sortering av gjenstander som kan beholdes, resirkuleres eller kastes",
+          "Håndtering av tunge og store gjenstander",
+          "Sikker tilgang selv i trange områder",
+          "Miljøvennlig avfallsbehandling"
+        ],
+        "conclusion": "Vi sørger for at loftet ditt gjenvinner all sin plass, klar for nye prosjekter."
+      },
+      "videLocaux": {
+        "intro": "Vi støtter bedrifter og profesjonelle i å tømme deres lokaler, verksteder, butikker eller lagre.",
+        "weOffer": "Vår tjeneste inkluderer:",
+        "points": [
+          "Rask evakuering av utdaterte møbler og utstyr",
+          "Demontering og tung håndtering",
+          "Streng overholdelse av sikkerhetsstandarder",
+          "Resirkulering og behandling tilpasset profesjonelt avfall"
+        ],
+        "conclusion": "Vi griper inn på kort tid for å begrense påvirkningen på din aktivitet."
+      },
+      "videBureau": {
+        "intro": "Vår kontortømmingstjeneste er beregnet for selskaper som ønsker å frigjøre eller reorganisere sine arbeidsplasser.",
+        "weOffer": "Vi tilbyr:",
+        "points": [
+          "Tømming av kontormøbler (stoler, bord, skap...)",
+          "Gjenvinning og verdsetting av datautstyr",
+          "Selektiv sortering og ansvarlig avfallshåndtering",
+          "Diskret og organisert intervensjon"
+        ],
+        "conclusion": "Vi hjelper deg med å optimalisere dine rom samtidig som vi respekterer dine planleggingsbegrensninger."
+      },
+      "nettoyage": {
+        "intro": "I tillegg til tømming, tilbyr vi rengjøringstjenester for å gjøre rommene dine perfekt rene og klare til bruk.",
+        "weOffer": "Våre tjenester inkluderer:",
+        "points": [
+          "Komplett rengjøring av gulv og overflater",
+          "Desinfeksjon av sensitive områder",
+          "Støvtørking og vindusvask",
+          "Miljøvennlige produkter"
+        ],
+        "conclusion": "Vi tilpasser vår intervensjon til dine spesifikke behov for et upåklagelig resultat."
+      }
+    }
+  },
+  "contact": {
+    "pageTitle": "Kontakt Oss",
+    "title": "Kontakt Oss",
+    "subtitle": "Vi er her for å hjelpe deg med alle dine tømme- og rengjøringsbehov",
+    "info": {
+      "title": "Kontaktinformasjon",
+      "text": "Ikke nøl med å kontakte oss for et gratis tilbud eller for mer informasjon om våre tjenester.",
+      "location": "Brussel, Belgia",
+      "phone": "+32 123 456 789",
+      "email": "info@videmaison.be",
+      "hours": "24/24 og 7/7"
+    },
+    "form": {
+      "title": "Send oss en melding",
+      "name": "Navn",
+      "email": "E-post",
+      "phone": "Telefon",
+      "address": "Adresse",
+      "serviceType": "Type tjeneste",
+      "message": "Melding",
+      "submit": "Send forespørsel",
+      "success_message": "Takk for din henvendelse! Vi vil kontakte deg snart.",
+      "errors": {
+        "name_required": "Navn er påkrevd",
+        "email_required": "E-post er påkrevd",
+        "email_invalid": "Vennligst oppgi en gyldig e-postadresse",
+        "phone_required": "Telefonnummer er påkrevd",
+        "message_required": "Melding er påkrevd"
+      }
+    }
+  },
+  "about": {
+    "title": "Om VideMaison",
+    "mission": "Vår Misjon",
+    "company": "Vårt Selskap"
+  },
+  "admin": {
+    "login": {
+      "title": "Admin Innlogging",
+      "email": "E-post",
+      "password": "Passord",
+      "submit": "Logg Inn",
+      "error": "Ugyldige legitimasjoner"
+    },
+    "dashboard": {
+      "title": "Dashbord",
+      "requests": "Forespørsler",
+      "users": "Brukere",
+      "settings": "Innstillinger"
+    }
+  },
+  "common": {
+    "loading": "Laster...",
+    "error": "Feil",
+    "success": "Suksess",
+    "cancel": "Avbryt",
+    "save": "Lagre",
+    "delete": "Slett",
+    "edit": "Rediger",
+    "view": "Vis",
+    "back": "Tilbake",
+    "next": "Neste",
+    "previous": "Forrige"
+  },
+  "footer": {
+    "company": {
+      "description": "Vårt selskap er det som kommer nærmest perfeksjon når det gjelder å tilby tjenester for hustømming, loftstømming, leilighetstømming, osv."
+    },
+    "services": "Tjenester",
+    "usefulLinks": "Nyttige Lenker",
+    "contact": "Kontakt",
+    "copyright": "© {year} Vide Maison. Alle rettigheter reservert."
+  }
+}

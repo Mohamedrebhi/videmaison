@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import { useTranslation } from 'react-i18next';
 
 const PageContainer = styled.div`
   padding-top: 80px; // For navbar
@@ -133,15 +134,15 @@ const ValueCard = styled.div`
 `;
 
 const AboutPage = () => {
+  const { t } = useTranslation();
+  
   return (
     <PageContainer>
       <HeroSection>
         <div>
-          <HeroTitle>
-            À Propos de <span>Nous</span>
-          </HeroTitle>
+          <HeroTitle>À <span>Propos</span></HeroTitle>
           <HeroSubtitle>
-            Découvrez notre histoire, notre mission et nos valeurs qui font de nous le leader du service de vide maison à Bruxelles.
+            Découvrez notre histoire, notre mission et nos valeurs
           </HeroSubtitle>
         </div>
       </HeroSection>
@@ -154,30 +155,18 @@ const AboutPage = () => {
             </AboutImage>
             <AboutText>
               <h2>Notre Histoire</h2>
-              <p>
-                Fondée en 2010, notre entreprise de vide maison a débuté avec une vision simple : offrir un service de débarras professionnel, respectueux et éco-responsable aux habitants de Bruxelles et ses environs.
-              </p>
-              <p>
-                Au fil des années, nous avons développé notre expertise et élargi notre gamme de services pour répondre aux besoins variés de notre clientèle, qu'il s'agisse de particuliers ou de professionnels.
-              </p>
-              <p>
-                Aujourd'hui, nous sommes fiers d'être reconnus comme l'un des leaders du secteur, avec des milliers d'interventions réussies et un taux de satisfaction client exceptionnel.
-              </p>
+              <p>Fondée en 2015, VideMaison est née de la passion de son fondateur pour aider les gens à se libérer de l'encombrement et à donner une seconde vie aux objets.</p>
+              <p>Au fil des années, nous avons développé une expertise dans tous les types de débarras, des maisons aux locaux professionnels, en passant par les appartements, les greniers et les caves.</p>
+              <p>Aujourd'hui, nous sommes fiers d'être reconnus comme un acteur majeur du débarras et du nettoyage dans la région, avec une réputation d'excellence et de fiabilité.</p>
             </AboutText>
           </AboutContent>
           
           <AboutContent>
             <AboutText>
               <h2>Notre Mission</h2>
-              <p>
-                Notre mission est de vous offrir une solution complète et sans stress pour tous vos besoins de débarras et nettoyage, que ce soit suite à un déménagement, une succession, ou simplement pour faire de la place.
-              </p>
-              <p>
-                Nous nous engageons à fournir un service de qualité supérieure, avec une attention particulière portée à la valorisation des objets et au recyclage des déchets, dans une démarche éco-responsable.
-              </p>
-              <p>
-                Notre équipe de professionnels travaille avec respect, efficacité et discrétion pour vous garantir une expérience positive et un résultat impeccable.
-              </p>
+              <p>Chez VideMaison, notre mission est de fournir des services de débarras et de nettoyage de haute qualité, tout en respectant l'environnement et en valorisant au maximum les objets récupérés.</p>
+              <p>Nous nous engageons à offrir un service personnalisé, adapté aux besoins spécifiques de chaque client, qu'il s'agisse de particuliers ou de professionnels.</p>
+              <p>Notre objectif est de simplifier la vie de nos clients en leur offrant une solution clé en main pour se débarrasser de leurs objets indésirables, tout en leur garantissant un service rapide, efficace et respectueux.</p>
             </AboutText>
             <AboutImage>
               <img src="/images/about-mission.jpg" alt="Notre mission" />
@@ -192,37 +181,37 @@ const AboutPage = () => {
           <ValueCard>
             <i className="fas fa-handshake"></i>
             <h3>Professionnalisme</h3>
-            <p>Nous abordons chaque projet avec sérieux et compétence, en veillant à respecter nos engagements et à dépasser vos attentes.</p>
+            <p>Nous abordons chaque projet avec sérieux et compétence, en veillant à respecter les délais et à fournir un travail de qualité.</p>
           </ValueCard>
           
           <ValueCard>
             <i className="fas fa-leaf"></i>
             <h3>Éco-responsabilité</h3>
-            <p>Nous privilégions le recyclage et la valorisation des objets, en minimisant l'impact environnemental de nos activités.</p>
+            <p>Nous nous engageons à minimiser notre impact environnemental en recyclant et en valorisant au maximum les objets récupérés.</p>
           </ValueCard>
           
           <ValueCard>
             <i className="fas fa-heart"></i>
             <h3>Respect</h3>
-            <p>Nous traitons vos biens et votre propriété avec le plus grand soin, en faisant preuve de discrétion et d'empathie.</p>
+            <p>Nous traitons chaque client, chaque objet et chaque espace avec le plus grand respect, en reconnaissant la valeur sentimentale que peuvent avoir certains biens.</p>
           </ValueCard>
           
           <ValueCard>
             <i className="fas fa-bolt"></i>
             <h3>Efficacité</h3>
-            <p>Nous travaillons rapidement et méthodiquement pour vous offrir un service impeccable dans les délais convenus.</p>
+            <p>Nous travaillons de manière rapide et organisée pour minimiser les perturbations et permettre à nos clients de retrouver rapidement un espace propre et fonctionnel.</p>
           </ValueCard>
           
           <ValueCard>
             <i className="fas fa-comments"></i>
             <h3>Communication</h3>
-            <p>Nous maintenons un dialogue ouvert et transparent avec nos clients tout au long du processus.</p>
+            <p>Nous maintenons une communication claire et transparente avec nos clients tout au long du processus, en les tenant informés de l'avancement des travaux.</p>
           </ValueCard>
           
           <ValueCard>
             <i className="fas fa-thumbs-up"></i>
-            <h3>Satisfaction</h3>
-            <p>Votre satisfaction est notre priorité absolue, et nous ne ménageons aucun effort pour l'atteindre.</p>
+            <h3>Satisfaction client</h3>
+            <p>Notre priorité absolue est la satisfaction de nos clients, et nous mettons tout en œuvre pour dépasser leurs attentes et leur offrir une expérience positive.</p>
           </ValueCard>
         </ValuesGrid>
       </ValuesSection>
