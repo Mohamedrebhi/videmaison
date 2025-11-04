@@ -1,14 +1,14 @@
 # VideMaison
 
-A modern full-stack real estate management platform built with React and Flask, featuring real-time communication, admin dashboard, and multilingual support.
+A modern full-stack clearance platform built with React and Flask, featuring real-time communication, admin dashboard, and multilingual support.
 
 ## Overview
 
-VideMaison is a comprehensive real estate management platform designed to streamline property management, communication, and user experience. The platform is built using React and Flask, with a focus on scalability, security, and maintainability.
+VideMaison is a comprehensive clearance platform designed to streamline Services , communication, and user experience. The platform is built using React and Flask, with a focus on scalability, security, and maintainability.
 
 ## Features
 
-- **Property Listings**: Browse and manage real estate properties
+- **Services Listings**: Browse and demande a service
 - **Real-time Chat**: WebSocket-based live communication system
 - **Admin Dashboard**: Comprehensive admin panel for property and user management
 - **Multilingual Support**: Multi-language interface for better accessibility
@@ -210,7 +210,7 @@ This project is licensed under the MIT License.
 
 ## Contact
 
-For questions or support, please contact: [your-email@example.com]
+For questions or support, please contact: [m.rabhi21316@pi.tn]
 
 ---
 
